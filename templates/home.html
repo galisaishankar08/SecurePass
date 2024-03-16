@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass API</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles if needed */
+    </style>
+</head>
+<body class="bg-blue-50">
+    <div class="container mx-auto px-4 py-8">
+        <div class="bg-white shadow-xl rounded-lg p-6">
+            <h1 class="text-4xl font-bold text-center text-blue-800 mt-4">SecurePass API</h1>
+            <p class="mt-4 text-lg text-gray-700">Welcome to the SecurePass API, a tool designed to evaluate the security of your passwords with enhanced safety measures.</p>
+
+            <div class="mt-8">
+                <h2 class="text-2xl font-bold text-blue-700">Using the API</h2>
+                <p class="mt-4 text-gray-600">To check if a password is secure, send a POST request to <code class="bg-blue-100 text-blue-800 rounded px-2">/check_password</code> with a JSON payload. Include your password, name, date of birth (DOB), and email. The API evaluates your password against security criteria and personal info to ensure its strength.</p>
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-xl font-bold text-blue-700">POST /check_password</h3>
+                <p class="mt-4 text-gray-600">Expected JSON payload format:</p>
+                <pre class="bg-blue-100 text-blue-800 rounded p-4"><code>{
+  "password": "yourPassword123!",
+  "name": "Your Name",
+  "dob": "YYYY-MM-DD",
+  "email": "your.email@example.com"
+}</code></pre>
+                <p class="mt-4 text-gray-600">The API's response will indicate the password's security status and provide a detailed message.</p>
+            </div>
+
+            <div class="mt-8 mb-10">
+                <p class="text-lg text-gray-700">Explore and secure your passwords today!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
