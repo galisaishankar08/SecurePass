@@ -1,8 +1,12 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS
 from passwordpolicy import PasswordPolicy
 
 app = Flask(__name__)
 password_policy = PasswordPolicy()
+
+# Enable CORS for all domains on all routes
+CORS(app)
 
 @app.route('/')
 def home():
